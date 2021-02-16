@@ -162,3 +162,48 @@ puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.7) lib/puma/server.rb:472:in `process_client'
 puma (4.3.7) lib/puma/server.rb:328:in `block in run'
 puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users" for ::1 at 2021-02-16 16:24:38 -0500
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 5.8ms | ActiveRecord: 1.2ms | Allocations: 5507)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-16 16:26:04 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 43ms (Views: 8.5ms | ActiveRecord: 2.3ms | Allocations: 6172)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-16 16:28:01 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Started GET "/api/v1/goals" for ::1 at 2021-02-16 16:28:01 -0500
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.5ms | Allocations: 927)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 957)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-16 16:30:36 -0500
+Started GET "/api/v1/goals" for ::1 at 2021-02-16 16:30:36 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 940)
+
+
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms | Allocations: 2110)
+
+
