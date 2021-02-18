@@ -17,4 +17,8 @@ class FetchCalls {
     .then(goals => (console.log(goals)));
     }
 
+    findOrCreateUser(){
+        
+    }
+
 }

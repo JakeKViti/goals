@@ -1,7 +1,13 @@
-let username = document.getElementById('user-form')
+class User {
+    //constructor(user)
 
-username.addEventListener("submit" , function(e){ 
-    e.preventDefault()
-    let nammer = document.getElementById('name-input')
-    console.log(nammer.value)
-})
+    static login(){
+        let username = document.getElementById('user-form')
+        username.addEventListener("submit" , function(e){ 
+        e.preventDefault()
+    
+        let nammer = document.getElementById('name-input')
+        console.log(nammer.value)
+        })
+    }
+}
