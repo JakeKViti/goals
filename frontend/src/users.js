@@ -1,5 +1,8 @@
 class User {
-    //constructor(user)
+    constructor(user){
+        this.name = user.name
+        this.id = user.id
+    }
 
     static login(){
         let username = document.getElementById('user-form')
@@ -7,7 +10,9 @@ class User {
             e.preventDefault()
             let nammer = document.getElementById('name-input').value
             console.log(nammer)
-            sss.findOrCreateUser(nammer)
+            let dude = sss.findOrCreateUser(nammer)
+            //debugger
+            //let nuser = User.new(dude)
         })
     }
 }
