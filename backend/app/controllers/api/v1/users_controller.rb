@@ -5,14 +5,19 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
-        user = User.create(user_params)
-        render json: user
+        #binding.pry
+        user = User.find_by(name: params[:_json])
+        if user == nil
+            user = User.create(name: params[:_json])
+            user.save
+        end
+            render json: user
     end
 
     private
 
-    def goal_params
-        params.require(:problem).permit(
+    def user_params
+        params.require(:users).permit(
             :name
         )
     end
