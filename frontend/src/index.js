@@ -1,5 +1,5 @@
 const sss = new FetchCalls();
-sss.consoleLogUsers()
+//sss.findOrCreateUser()
 
 
 document.addEventListener('DOMContentLoaded', function(){

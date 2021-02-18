@@ -4,10 +4,10 @@ class User {
     static login(){
         let username = document.getElementById('user-form')
         username.addEventListener("submit" , function(e){ 
-        e.preventDefault()
-    
-        let nammer = document.getElementById('name-input')
-        console.log(nammer.value)
+            e.preventDefault()
+            let nammer = document.getElementById('name-input').value
+            console.log(nammer)
+            sss.findOrCreateUser(nammer)
         })
     }
 }
