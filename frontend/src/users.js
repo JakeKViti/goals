@@ -12,6 +12,7 @@ class User {
             .then(dude => {
                 console.log(dude)
                 let newUser = new User(dude)
+                username.reset()
                 newUser.displayName()
             })
         })
