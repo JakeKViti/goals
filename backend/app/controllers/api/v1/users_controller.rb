@@ -11,8 +11,9 @@ class Api::V1::UsersController < ApplicationController
             user = User.create(user_params)
             user.save
             render json: user
+        else
+            redirect_to "/api/v1/users/#{user.id}"
         end
-        redirect_to "/api/v1/users/#{user.id}"
     end
 
     def show
