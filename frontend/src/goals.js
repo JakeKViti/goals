@@ -4,4 +4,9 @@ class Goal {
         this.id = goal.id
         this.user_id = goal.user_id
     }
+
+    displayGoals(){
+        let geol = document.getElementById('test')
+        geol.innerText = `${this.title}`
+    }
 }

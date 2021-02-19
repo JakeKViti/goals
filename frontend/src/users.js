@@ -27,6 +27,8 @@ class User {
         sss.displayAllGoals()
         .then(zzz => {
             console.log(zzz)
+            let goals = new Goal(zzz[0])
+            goals.displayGoals()
         })
     }
 }

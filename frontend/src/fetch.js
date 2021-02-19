@@ -28,7 +28,9 @@ class FetchCalls {
 
     displayAllGoals(){
       return fetch(this.goalURL)
-      .then(resp => resp.json())
-      .then(goals => {return goals})
+      .then(resp => {
+        let json = resp.json()
+        return json  
+      })
   }
 }
