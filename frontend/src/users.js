@@ -27,8 +27,12 @@ class User {
         sss.displayAllGoals()
         .then(zzz => {
             console.log(zzz)
-            let goals = new Goal(zzz[0])
-            goals.displayGoals()
+            for (let i=0; i < zzz.length; i++){
+                if (this.id == zzz[i].user_id){
+                    let goals = new Goal(zzz[i])
+                    goals.displayGoals()
+                }
+            }
         })
     }
 }
