@@ -5,31 +5,25 @@ class FetchCalls {
     this.goalURL = `${this.baseURL}/goals`
     }
 
-    consoleLogUsers(){
-    fetch(this.userURL)
-    .then(resp => resp.json())
-    .then(users => (console.log(users)));
-    }
-
-    consoleLogGoals(){
-    fetch(this.goalURL)
-    .then(resp => resp.json())
-    .then(goals => (console.log(goals)));
-    }
-
     findOrCreateUser(e){
-        fetch(this.userURL, {
+        return fetch(this.userURL, {
             method: 'POST',
             headers:  {
               "Content-Type": "application/json",
               "Accept": "application/json"
             },
-            body: JSON.stringify(e.target.children[1].value)
+            body: JSON.stringify(
+              {
+                users: {
+                    name: e.target.children[1].value
+                }
+            })
           })
-          .then(response => {
-            let json = response.json()
-            console.log(json)
-          })
+          .then(resp => {
+            let json = resp.json()
+            console.log(json) 
+            return json     
+        })
     }
 
 }
