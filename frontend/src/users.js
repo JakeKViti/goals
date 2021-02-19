@@ -8,14 +8,20 @@ class User {
         let username = document.getElementById('user-form')
         username.addEventListener("submit" , function(e){ 
             e.preventDefault()
-            let nammer = document.getElementById('name-input').value
-            console.log(nammer)
             sss.findOrCreateUser(e)
             .then(dude => {
                 console.log(dude)
                 let newUser = new User(dude)
-                debugger
+                newUser.displayName()
             })
         })
     }   
+
+    displayName(){
+        console.log("ツ")
+        let welcome = document.getElementById('qwerty')
+        let question = document.getElementById('name-label')
+        welcome.innerText = `Welcome ${this.name}!`
+        question.innerText = "Enter a goal here:"
+    }
 }
