@@ -17,17 +17,19 @@ class FetchCalls {
     .then(goals => (console.log(goals)));
     }
 
-    findOrCreateUser(name){
+    findOrCreateUser(e){
         fetch(this.userURL, {
             method: 'POST',
             headers:  {
               "Content-Type": "application/json",
               "Accept": "application/json"
             },
-            body: JSON.stringify(name)
+            body: JSON.stringify(e.target.children[1].value)
           })
-        .then(response => response.json())
-        .then(result => console.log(result))
-        };
+          .then(response => {
+            let json = response.json()
+            console.log(json)
+          })
+    }
 
 }

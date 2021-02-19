@@ -5,13 +5,19 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
-        #binding.pry
-        user = User.find_by(name: params[:_json])
+       # binding.pry
+        user = User.find_by(name: params[:users][:name])
         if user == nil
-            user = User.create(name: params[:_json])
+            user = User.create(user_params)
             user.save
-        end
             render json: user
+        end
+        redirect_to "/api/v1/users/#{user.id}"
+    end
+
+    def show
+        user = User.find_by(id: params[:id])
+        render json: user
     end
 
     private
