@@ -24,5 +24,9 @@ class User {
         let question = document.getElementById('name-label')
         welcome.innerText = `Welcome ${this.name}!`
         question.innerText = "Enter a goal here:"
+        sss.displayAllGoals()
+        .then(zzz => {
+            console.log(zzz)
+        })
     }
 }

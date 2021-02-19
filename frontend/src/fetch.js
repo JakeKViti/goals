@@ -26,4 +26,9 @@ class FetchCalls {
         })
     }
 
+    displayAllGoals(){
+      return fetch(this.goalURL)
+      .then(resp => resp.json())
+      .then(goals => {return goals})
+  }
 }
