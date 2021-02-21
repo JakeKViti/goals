@@ -22,8 +22,19 @@ class User {
         console.log("ツ")
         let welcome = document.getElementById('qwerty')
         let question = document.getElementById('name-label')
+        let nameinputter = document.getElementById('name-input')
+        let btn = document.createElement("BUTTON");
+        document.body.appendChild(btn);
+        btn.innerText = "Submit"
+        let x = document.createElement("FORM");
+        x.setAttribute("id", "myForm");
+        document.body.appendChild(x);
+        let y = document.createElement("INPUT");
+        y.setAttribute("type", "text");
+        document.getElementById("myForm").appendChild(y);
         welcome.innerText = `Welcome ${this.name}!`
         question.innerText = "Enter a goal here:"
+        nameinputter.remove()
         sss.displayAllGoals()
         .then(zzz => {
             console.log(zzz)
@@ -34,5 +45,6 @@ class User {
                 }
             }
         })
+        
     }
 }
