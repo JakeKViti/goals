@@ -10,8 +10,16 @@ class Goal {
     }
 
     displayGoals(){
-        let geol = document.getElementById('test')
-        geol.innerText = `${this.title}`
-        debugger
+        var x = document.createElement("LI");
+        var t = document.createTextNode(Goal.userGoals[Goal.userGoals.length - 1].title);
+        x.appendChild(t);
+        document.getElementById("myGoals").appendChild(x);
+
+        //let goalcontainer = document.getElementsById("goals-container")
+        //let gaol = document.createElement('li')
+        //gaol.setAttribute('goal-id', this.id)
+        //gaol.innerText = `${this.title}`
+        //goalcontainer.insertAdjacentHTML('beforeend', goalcontainer)
+        //debugger
     }
 }
