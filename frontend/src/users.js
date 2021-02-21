@@ -23,18 +23,21 @@ class User {
         let welcome = document.getElementById('qwerty')
         let question = document.getElementById('name-label')
         let nameinputter = document.getElementById('name-input')
-        let btn = document.createElement("BUTTON");
-        document.body.appendChild(btn);
-        btn.innerText = "Submit"
+        let namesubmit = document.getElementById('name-submitter')
+        let asd = document.getElementById('user-inputer-container')
         let x = document.createElement("FORM");
         x.setAttribute("id", "myForm");
-        document.body.appendChild(x);
+        asd.appendChild(x);
         let y = document.createElement("INPUT");
         y.setAttribute("type", "text");
         document.getElementById("myForm").appendChild(y);
+        let btn = document.createElement("BUTTON");
+        asd.appendChild(btn);
+        btn.innerText = "Submit"
         welcome.innerText = `Welcome ${this.name}!`
         question.innerText = "Enter a goal here:"
         nameinputter.remove()
+        namesubmit.remove()
         sss.displayAllGoals()
         .then(zzz => {
             console.log(zzz)
