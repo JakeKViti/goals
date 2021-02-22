@@ -34,8 +34,7 @@ class FetchCalls {
       })
   }
 
-  createGoal(e){
-    debugger
+  createGoal(e, userid){
     return fetch(this.goalURL, {
         method: 'POST',
         headers:  {
@@ -47,7 +46,7 @@ class FetchCalls {
             goals: {
                 title: e.target.children[0].value,
                 completed: false,
-                user_id: 1
+                user_id: userid
             }
         })
       })

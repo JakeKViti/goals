@@ -31,6 +31,6 @@ class User {
                 }
             }
         })
-        Goal.newGoal()
+        Goal.newGoal(this.id)
     }
 }

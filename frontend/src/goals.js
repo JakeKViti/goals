@@ -39,12 +39,12 @@ class Goal {
         namesubmit.remove()
     }
 
-    static newGoal(){
-        console.log("Kiara is best boss")
+    static newGoal(userid){
+        console.log(userid)
         let newGoal = document.getElementById('myForm')
         newGoal.addEventListener("submit" , function(e){ 
             e.preventDefault()
-            sss.createGoal(e)
+            sss.createGoal(e, userid)
             .then(newGoal => {
                 let goals = new Goal(newGoal)
                 goals.displayGoals()
