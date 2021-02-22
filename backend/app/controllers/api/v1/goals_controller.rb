@@ -5,6 +5,7 @@ class Api::V1::GoalsController < ApplicationController
     end
 
     def create
+        #binding.pry
         goal = Goal.create(goal_params)
         render json: goal
     end
@@ -17,8 +18,9 @@ class Api::V1::GoalsController < ApplicationController
     private
 
     def goal_params
-        params.require(:problem).permit(
-            :name, 
+        params.require(:goals).permit(
+            :title,
+            :completed, 
             :user_id)
     end
 end
