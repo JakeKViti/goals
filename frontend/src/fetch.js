@@ -35,6 +35,7 @@ class FetchCalls {
   }
 
   createGoal(e){
+    debugger
     return fetch(this.goalURL, {
         method: 'POST',
         headers:  {
@@ -43,8 +44,10 @@ class FetchCalls {
         },
         body: JSON.stringify(
           {
-            users: {
-                name: e.target.children[1].value
+            goals: {
+                title: e.target.children[0].value,
+                completed: false,
+                user_id: 1
             }
         })
       })

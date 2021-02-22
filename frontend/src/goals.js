@@ -35,7 +35,6 @@ class Goal {
         btn.innerText = "Submit"
         welcome.innerText = `Welcome!`
         question.innerText = "Enter a goal here:"
-        debugger
         nameinputter.remove()
         namesubmit.remove()
     }
