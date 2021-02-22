@@ -45,8 +45,9 @@ class Goal {
         newGoal.addEventListener("submit" , function(e){ 
             e.preventDefault()
             sss.createGoal(e)
-            .then(dude => {
-                console.log(dude)
+            .then(newGoal => {
+                let goals = new Goal(newGoal)
+                goals.displayGoals()
             })
         })
     }
