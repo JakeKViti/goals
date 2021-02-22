@@ -10,10 +10,17 @@ class Goal {
     }
 
     displayGoals(){
-        var x = document.createElement("LI");
-        var t = document.createTextNode(Goal.userGoals[Goal.userGoals.length - 1].title);
+        let x = document.createElement("LI");
+        let t = document.createTextNode(Goal.userGoals[Goal.userGoals.length - 1].title);
         x.appendChild(t);
+        let deletebtn = document.createElement("BUTTON");
+        deletebtn.innerText = "Delete"
+        x.appendChild(deletebtn);
+        let completebtn = document.createElement("BUTTON");
+        completebtn.innerText = "Complete Goal"
+        x.appendChild(completebtn);
         document.getElementById("myGoals").appendChild(x);
+        
         
     }
 
