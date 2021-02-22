@@ -12,15 +12,18 @@ class Goal {
     displayGoals(){
         let x = document.createElement("LI");
         let t = document.createTextNode(Goal.userGoals[Goal.userGoals.length - 1].title);
+        x.setAttribute("id", `goal-${(Goal.userGoals.length)}`);
         x.appendChild(t);
         let deletebtn = document.createElement("BUTTON");
         deletebtn.innerText = "Delete"
+        deletebtn.setAttribute("id", `delete-${(Goal.userGoals.length)}`);
         x.appendChild(deletebtn);
         let completebtn = document.createElement("BUTTON");
         completebtn.innerText = "Complete Goal"
+        completebtn.setAttribute("id", `complete-${(Goal.userGoals.length)}`);
         x.appendChild(completebtn);
         document.getElementById("myGoals").appendChild(x);
-        
+        debugger
         
     }
 
