@@ -33,4 +33,25 @@ class FetchCalls {
         return json  
       })
   }
+
+  createGoal(e){
+    return fetch(this.goalURL, {
+        method: 'POST',
+        headers:  {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(
+          {
+            users: {
+                name: e.target.children[1].value
+            }
+        })
+      })
+      .then(resp => {
+        let json = resp.json()
+        console.log(json) 
+        return json     
+    })
+}
 }

@@ -21,7 +21,6 @@ class User {
     displayName(){
         console.log("ツ")
         Goal.goalForm()
-        debugger
         sss.displayAllGoals()
         .then(zzz => {
             console.log(zzz)
@@ -32,6 +31,6 @@ class User {
                 }
             }
         })
-        
+        Goal.newGoal()
     }
 }

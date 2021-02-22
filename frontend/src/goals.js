@@ -14,13 +14,7 @@ class Goal {
         var t = document.createTextNode(Goal.userGoals[Goal.userGoals.length - 1].title);
         x.appendChild(t);
         document.getElementById("myGoals").appendChild(x);
-
-        //let goalcontainer = document.getElementsById("goals-container")
-        //let gaol = document.createElement('li')
-        //gaol.setAttribute('goal-id', this.id)
-        //gaol.innerText = `${this.title}`
-        //goalcontainer.insertAdjacentHTML('beforeend', goalcontainer)
-        //debugger
+        
     }
 
     static goalForm(){
@@ -34,13 +28,27 @@ class Goal {
         asd.appendChild(x);
         let y = document.createElement("INPUT");
         y.setAttribute("type", "text");
+        y.setAttribute("id", "goal");
         document.getElementById("myForm").appendChild(y);
         let btn = document.createElement("BUTTON");
-        asd.appendChild(btn);
+        document.getElementById("myForm").appendChild(btn);
         btn.innerText = "Submit"
-        welcome.innerText = `Welcome ${this.name}!`
+        welcome.innerText = `Welcome!`
         question.innerText = "Enter a goal here:"
+        debugger
         nameinputter.remove()
         namesubmit.remove()
+    }
+
+    static newGoal(){
+        console.log("Kiara is best boss")
+        let newGoal = document.getElementById('myForm')
+        newGoal.addEventListener("submit" , function(e){ 
+            e.preventDefault()
+            sss.createGoal(e)
+            .then(dude => {
+                console.log(dude)
+            })
+        })
     }
 }
