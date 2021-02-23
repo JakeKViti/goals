@@ -12,14 +12,19 @@ class Goal {
     displayGoals(){
         let goalcontainer = document.querySelector(".goals-container")
         let usergoalform = document.createElement('form')
-        let testButton = document.createElement('BUTTON')
-        testButton.innerText = "Test"
-        testButton.id = `test-${this.id}`
-        usergoalform.appendChild(testButton)
+        let completebtn = document.createElement('BUTTON')
+        let deletebtn = document.createElement('BUTTON')
+        completebtn.innerText = "Complete"
+        completebtn.id = `complete`
+        usergoalform.appendChild(completebtn)
+        deletebtn.innerText = "Delete"
+        deletebtn.id = `delete`
+        usergoalform.appendChild(deletebtn)
         usergoalform.id = `form-${this.id}`
         let goal = document.createTextNode(this.title)
         goalcontainer.appendChild(goal)
         goalcontainer.appendChild(usergoalform)
+        Goal.btnTest(usergoalform)
         //let x = document.createElement("LI");
         //let t = document.createTextNode(Goal.userGoals[Goal.userGoals.length - 1].title);
         //x.setAttribute("id", `goal-${(Goal.userGoals.length)}`);
@@ -72,14 +77,14 @@ class Goal {
         })
     }
 
-    static delete(test){
-        
-        let test1 = document.getElementById('goal-1')
-        debugger
-        test1.addEventListener("submit", function(e){
+    static btnTest(test){
+        test.addEventListener("submit" , function(e){ 
             e.preventDefault()
-            debugger
-            console.log(":^)")
-        }) 
+            if (e.submitter.id == "complete"){
+                console.log("complete")
+            } else if (e.submitter.id == "delete") {
+                console.log("delete")
+            }  
+        })
     }
 }
