@@ -20,7 +20,8 @@ class Goal {
         let goal = document.createTextNode(this.title)
         goalcontainer.appendChild(goal)
         goalcontainer.appendChild(usergoalform)
-        this.displayDelete()       
+        this.displayDelete()
+        usergoalform.addEventListener('submit', this.completeGoal.bind(this))   
     }
 
     displayDelete(){
@@ -32,7 +33,7 @@ class Goal {
         usergoalform.appendChild(deletebtn)
         usergoalform.id = `${this.id}`
         goalcontainer.appendChild(usergoalform)
-        Goal.btnTest(usergoalform)    
+        usergoalform.addEventListener('submit', this.deleteGoal.bind(this))   
     }
 
     static goalForm(){
@@ -70,5 +71,16 @@ class Goal {
         })
     }
 
-    
+    async completeGoal(e){
+        e.preventDefault()
+        console.log("complete")
+        
+    }
+
+    async deleteGoal(e){
+        e.preventDefault()
+        console.log("delete")
+        
+    }
+
 }
