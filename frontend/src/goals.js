@@ -13,33 +13,26 @@ class Goal {
         let goalcontainer = document.querySelector(".goals-container")
         let usergoalform = document.createElement('form')
         let completebtn = document.createElement('BUTTON')
-        let deletebtn = document.createElement('BUTTON')
         completebtn.innerText = "Complete"
         completebtn.id = `complete`
         usergoalform.appendChild(completebtn)
-        deletebtn.innerText = "Delete"
-        deletebtn.id = `delete`
-        usergoalform.appendChild(deletebtn)
-        usergoalform.id = `form-${this.id}`
+        usergoalform.id = `${this.id}`
         let goal = document.createTextNode(this.title)
         goalcontainer.appendChild(goal)
         goalcontainer.appendChild(usergoalform)
-        Goal.btnTest(usergoalform)
-        //let x = document.createElement("LI");
-        //let t = document.createTextNode(Goal.userGoals[Goal.userGoals.length - 1].title);
-        //x.setAttribute("id", `goal-${(Goal.userGoals.length)}`);
-        //x.appendChild(t);
-        //let deletebtn = document.createElement("BUTTON");
-        //deletebtn.innerText = "Delete"
-        //deletebtn.setAttribute("id", `delete-${(Goal.userGoals.length)}`);
-        //x.appendChild(deletebtn);
-        //let completebtn = document.createElement("BUTTON");
-        //completebtn.innerText = "Complete Goal"
-        //completebtn.setAttribute("id", `complete-${(Goal.userGoals.length)}`);
-        //x.appendChild(completebtn);
-        //document.getElementById("goalcontainer").appendChild(x);
-        //Goal.delete(myGoals)
-        
+        this.displayDelete()       
+    }
+
+    displayDelete(){
+        let goalcontainer = document.querySelector(".goals-container")
+        let usergoalform = document.createElement('form')
+        let deletebtn = document.createElement('BUTTON')
+        deletebtn.innerText = "Delete"
+        deletebtn.id = `delete`
+        usergoalform.appendChild(deletebtn)
+        usergoalform.id = `${this.id}`
+        goalcontainer.appendChild(usergoalform)
+        Goal.btnTest(usergoalform)    
     }
 
     static goalForm(){
@@ -77,14 +70,5 @@ class Goal {
         })
     }
 
-    static btnTest(test){
-        test.addEventListener("submit" , function(e){ 
-            e.preventDefault()
-            if (e.submitter.id == "complete"){
-                console.log("complete")
-            } else if (e.submitter.id == "delete") {
-                console.log("delete")
-            }  
-        })
-    }
+    
 }
