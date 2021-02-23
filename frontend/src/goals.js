@@ -10,20 +10,30 @@ class Goal {
     }
 
     displayGoals(){
-        let x = document.createElement("LI");
-        let t = document.createTextNode(Goal.userGoals[Goal.userGoals.length - 1].title);
-        x.setAttribute("id", `goal-${(Goal.userGoals.length)}`);
-        x.appendChild(t);
-        let deletebtn = document.createElement("BUTTON");
-        deletebtn.innerText = "Delete"
-        deletebtn.setAttribute("id", `delete-${(Goal.userGoals.length)}`);
-        x.appendChild(deletebtn);
-        let completebtn = document.createElement("BUTTON");
-        completebtn.innerText = "Complete Goal"
-        completebtn.setAttribute("id", `complete-${(Goal.userGoals.length)}`);
-        x.appendChild(completebtn);
-        document.getElementById("myGoals").appendChild(x);
-        debugger
+        let goalcontainer = document.querySelector(".goals-container")
+        let usergoalform = document.createElement('form')
+        let testButton = document.createElement('BUTTON')
+        testButton.innerText = "Test"
+        testButton.id = `test-${this.id}`
+        usergoalform.appendChild(testButton)
+        usergoalform.id = `form-${this.id}`
+        let goal = document.createTextNode(this.title)
+        goalcontainer.appendChild(goal)
+        goalcontainer.appendChild(usergoalform)
+        //let x = document.createElement("LI");
+        //let t = document.createTextNode(Goal.userGoals[Goal.userGoals.length - 1].title);
+        //x.setAttribute("id", `goal-${(Goal.userGoals.length)}`);
+        //x.appendChild(t);
+        //let deletebtn = document.createElement("BUTTON");
+        //deletebtn.innerText = "Delete"
+        //deletebtn.setAttribute("id", `delete-${(Goal.userGoals.length)}`);
+        //x.appendChild(deletebtn);
+        //let completebtn = document.createElement("BUTTON");
+        //completebtn.innerText = "Complete Goal"
+        //completebtn.setAttribute("id", `complete-${(Goal.userGoals.length)}`);
+        //x.appendChild(completebtn);
+        //document.getElementById("goalcontainer").appendChild(x);
+        //Goal.delete(myGoals)
         
     }
 
@@ -60,5 +70,16 @@ class Goal {
                 goals.displayGoals()
             })
         })
+    }
+
+    static delete(test){
+        
+        let test1 = document.getElementById('goal-1')
+        debugger
+        test1.addEventListener("submit", function(e){
+            e.preventDefault()
+            debugger
+            console.log(":^)")
+        }) 
     }
 }
