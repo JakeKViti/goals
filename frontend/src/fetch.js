@@ -62,4 +62,25 @@ class FetchCalls {
         method: "DELETE"
     })
   }
+
+  completeGoal(e){
+    return fetch(`${this.goalURL}/${e.target.id}`, {
+        method: 'PATCH',
+        headers:  {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(
+          {
+            goals: {
+              completed: true
+            }
+        })
+      })
+      .then(resp => {
+        let json = resp.json()
+        console.log(json) 
+        return json     
+    })
+}
 }

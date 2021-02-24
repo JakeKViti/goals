@@ -9,10 +9,11 @@ class Api::V1::GoalsController < ApplicationController
         render json: goal
     end
 
-    #def show
-    #    goal = Goal.find_by(id: params[:id])
-    #    render json: goal
-    #end
+    def update
+        #binding.pry
+        goal = Goal.find(params[:id]).update(goal_params)
+        render json: goal
+    end
 
     def destroy
         #binding.pry

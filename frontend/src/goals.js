@@ -73,11 +73,13 @@ class Goal {
         })
     }
 
+
     async completeGoal(e){
         e.preventDefault()
         let text = document.getElementById(`t${e.target.id}`)
         let completed = text.innerText.strike()
         document.getElementById(`t${e.target.id}`).innerHTML = completed;
+        sss.completeGoal(e)
         e.target.remove()
     }
 
