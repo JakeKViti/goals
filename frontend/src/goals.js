@@ -13,12 +13,14 @@ class Goal {
         let goalcontainer = document.querySelector(".goals-container")
         let usergoalform = document.createElement('form')
         let completebtn = document.createElement('BUTTON')
+        let goalz = document.createElement('p')
         completebtn.innerText = "Complete"
         completebtn.id = `complete`
         usergoalform.appendChild(completebtn)
         usergoalform.id = `${this.id}`
-        let goal = document.createTextNode(this.title)
-        goalcontainer.appendChild(goal)
+        goalz.innerText = this.title 
+        goalz.id = `t${this.id}`
+        goalcontainer.appendChild(goalz)
         goalcontainer.appendChild(usergoalform)
         this.displayDelete()
         usergoalform.addEventListener('submit', this.completeGoal.bind(this))   
@@ -73,15 +75,20 @@ class Goal {
 
     async completeGoal(e){
         e.preventDefault()
-        console.log("complete")
-        
+        let text = document.getElementById(`t${e.target.id}`)
+        let completed = text.innerText.strike()
+        document.getElementById(`t${e.target.id}`).innerHTML = completed;
+        e.target.remove()
     }
 
     async deleteGoal(e){
         e.preventDefault()
+        let completed = document.getElementById(`${e.target.id}`)
+        let text = document.getElementById(`t${e.target.id}`)
         sss.deleteProblem(e)
-        console.log("delete")
-        
+        completed.remove()
+        text.remove()
+        e.target.remove()
     }
 
 }
