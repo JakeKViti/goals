@@ -1,5 +1,5 @@
 ## Goal Watcher
-TODO: Description
+This project is designed to help track a user's goals
 
 ## Installation
 
@@ -11,7 +11,7 @@ Add this to a new folder:
 5. Run open index.html within the frontend folder
 
 ## Usage 
-TODO: Usage
+When the user opens the html file, they are greeted with a login. After a user enters their name, their goals complete or uncompeted will show up. The user will be prompted to enter a goal. Once they have, the goal will appear and they will get 2 buttons by the goal (complete and delete). If they user clicks "complete", the goal will update to completed and strike through the text. This will persist between multiple logins. If the user clicks "delete" the goal will be deleted.
 
 ## Contributing
 
