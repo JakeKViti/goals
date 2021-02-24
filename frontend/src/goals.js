@@ -15,14 +15,21 @@ class Goal {
         let usergoalform = document.createElement('form')
         let completebtn = document.createElement('BUTTON')
         let goalz = document.createElement('p')
-        completebtn.innerText = "Complete"
-        completebtn.id = `complete`
-        usergoalform.appendChild(completebtn)
+        if (this.completed == false) {
+            completebtn.innerText = "Complete"
+            completebtn.id = `complete`
+            usergoalform.appendChild(completebtn)
+        }
         usergoalform.id = `${this.id}`
         goalz.innerText = this.title 
         goalz.id = `t${this.id}`
         goalcontainer.appendChild(goalz)
         goalcontainer.appendChild(usergoalform)
+        if (this.completed == true) {
+            let completedGoal = document.getElementById(`t${this.id}`)
+            let completed = completedGoal.innerText.strike()
+            document.getElementById(`t${this.id}`).innerHTML = completed;
+        }
         this.displayDelete()
         usergoalform.addEventListener('submit', this.completeGoal.bind(this))   
     }
