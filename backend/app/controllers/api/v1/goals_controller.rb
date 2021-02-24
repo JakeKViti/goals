@@ -9,7 +9,13 @@ class Api::V1::GoalsController < ApplicationController
         render json: goal
     end
 
-    def destory
+    #def show
+    #    goal = Goal.find_by(id: params[:id])
+    #    render json: goal
+    #end
+
+    def destroy
+        #binding.pry
         goal = Goal.find(params[:id]).destroy
         render json: goal
     end

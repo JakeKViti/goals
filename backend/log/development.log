@@ -9091,3 +9091,1630 @@ Processing by Api::V1::GoalsController#create as JSON
 Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 9.3ms | Allocations: 6786)
 
 
+Started POST "/api/v1/users" for ::1 at 2021-02-23 20:56:43 -0500
+Started POST "/api/v1/users" for ::1 at 2021-02-23 20:56:43 -0500
+  [1m[35m (11.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 37ms (ActiveRecord: 2.3ms | Allocations: 4278)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 37ms (ActiveRecord: 0.3ms | Allocations: 4667)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 20:56:44 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 3.0ms | Allocations: 891)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 20:56:44 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 20:56:44 -0500
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 903)
+
+
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 11.9ms | ActiveRecord: 1.5ms | Allocations: 7030)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 20:57:03 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 641)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 20:57:03 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 725)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 20:57:03 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1751)
+
+
+Started DELETE "/api/v1/goalsundefined" for ::1 at 2021-02-23 20:57:17 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/v1/goalsundefined"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2021-02-23 20:57:33 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 640)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 20:57:33 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 20:57:33 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.4ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.4ms | Allocations: 1751)
+
+
+Started DELETE "/api/v1/goals/undefined" for ::1 at 2021-02-23 20:57:36 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:00:10 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 623)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:00:10 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:00:10 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 1749)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:00:12 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/goals/9" for ::1 at 2021-02-23 21:00:22 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-02-23 21:00:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:00:27 -0500
+Processing by Api::V1::GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1746)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:00:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 12.2ms | ActiveRecord: 1.2ms | Allocations: 6514)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:00:48 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms | Allocations: 3161)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:00:48 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 838)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:00:48 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.7ms | Allocations: 1749)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:00:50 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/goals/9" for ::1 at 2021-02-23 21:01:13 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:01:15 -0500
+Processing by Api::V1::GoalsController#index as HTML
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 1746)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:01:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::GoalsController#index as HTML
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 1.3ms | Allocations: 6512)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:01:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms | Allocations: 3160)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:01:43 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 838)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:01:43 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 1749)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:01:45 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/goals/9" for ::1 at 2021-02-23 21:01:56 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:01:58 -0500
+Processing by Api::V1::GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1761)
+
+
+Started GET "/api/v1/goals/1" for ::1 at 2021-02-23 21:02:04 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:02:08 -0500
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:02:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms | Allocations: 3201)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:02:29 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 841)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:02:29 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 1.1ms | Allocations: 6153)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:02:31 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/goals/1" for ::1 at 2021-02-23 21:02:36 -0500
+Processing by Api::V1::GoalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 847)
+
+
+Started GET "/api/v1/goals/9" for ::1 at 2021-02-23 21:02:40 -0500
+Processing by Api::V1::GoalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 724)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:04:02 -0500
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 16ms (ActiveRecord: 1.5ms | Allocations: 3756)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:04:02 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 891)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:04:02 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 11.1ms | ActiveRecord: 1.1ms | Allocations: 6516)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:04:05 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/routes" for ::1 at 2021-02-23 21:04:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:05:42 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 640)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:05:42 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:05:42 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 1751)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:05:43 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:05:44 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:05:44 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:05:44 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:06:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms | Allocations: 3210)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:06:07 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 841)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:06:07 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 1.5ms | Allocations: 6118)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:07:15 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 624)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:07:15 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:07:15 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 1752)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:07:16 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::GoalsController):
+  
+actionpack (6.0.3.5) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.5) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:07:25 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms | Allocations: 3212)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:07:25 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 841)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:07:25 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.9ms | Allocations: 6118)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:07:34 -0500
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE (9) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[36mGoal Destroy (8.2ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 16.0ms | Allocations: 2779)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:07:36 -0500
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mGoal Load (0.4ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE (9) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[36mGoal Destroy (1.4ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+Completed 200 OK in 32ms (Views: 0.5ms | ActiveRecord: 17.8ms | Allocations: 3810)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:07:40 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 626)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:07:40 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:07:40 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 1475)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:08:38 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 624)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:08:39 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:08:39 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.7ms | Allocations: 1475)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:08:40 -0500
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE (9) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[36mGoal Destroy (1.0ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+Completed 200 OK in 32ms (Views: 0.6ms | ActiveRecord: 16.0ms | Allocations: 3842)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:08:44 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms | Allocations: 624)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:08:44 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:08:44 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 1338)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:08:51 -0500
+Processing by Api::V1::GoalsController#index as HTML
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1336)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:09:14 -0500
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE (9) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[36mGoal Destroy (1.5ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+Completed 200 OK in 35ms (Views: 0.3ms | ActiveRecord: 15.9ms | Allocations: 4933)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:09:19 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 624)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:09:19 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:09:19 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 1200)
+
+
+Started GET "/api/v1/goals/9" for ::1 at 2021-02-23 21:09:55 -0500
+Processing by Api::V1::GoalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:13:in `show'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 848)
+
+
+Started DELETE "/api/v1/goals/9" for ::1 at 2021-02-23 21:09:58 -0500
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE (9) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[36mGoal Destroy (1.2ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 15.2ms | Allocations: 4242)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:10:01 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 624)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:10:01 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:10:01 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1063)
+
+
+Started POST "/api/v1/goals" for ::1 at 2021-02-23 21:10:04 -0500
+Processing by Api::V1::GoalsController#create as JSON
+  Parameters: {"goals"=>{"title"=>"teststststststr", "completed"=>false, "user_id"=>1}, "goal"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mGoal Create (1.0ms)[0m  [1m[32mINSERT INTO "goals" ("title", "completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "teststststststr"], ["completed", 0], ["user_id", 1], ["created_at", "2021-02-24 02:10:04.675536"], ["updated_at", "2021-02-24 02:10:04.675536"]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+Completed 200 OK in 100ms (Views: 0.4ms | ActiveRecord: 10.6ms | Allocations: 8977)
+
+
+Started DELETE "/api/v1/goals/12" for ::1 at 2021-02-23 21:10:12 -0500
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mGoal Load (1.0ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE (12) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[36mGoal Destroy (1.8ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:18:in `destroy'
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 17.0ms | Allocations: 3446)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:10:14 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 10ms (ActiveRecord: 0.1ms | Allocations: 624)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:10:14 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:10:14 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1063)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:11:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms | Allocations: 3202)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:11:23 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 841)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:11:23 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.1ms | Allocations: 5432)
+
+
+Started DELETE "/api/v1/goals/12" for ::1 at 2021-02-23 21:11:26 -0500
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE (12) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):2:in `destroy'
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ (pry):3:in `destroy'
+  [1m[36mCACHE Goal Load (0.0ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE (12) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[36mGoal Destroy (1.1ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+Completed 200 OK in 45434ms (Views: 0.4ms | ActiveRecord: 17.3ms | Allocations: 27797)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:12:15 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms | Allocations: 3201)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:12:15 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 840)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:12:15 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.9ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 1.7ms | Allocations: 5295)
+
+
+Started POST "/api/v1/goals" for ::1 at 2021-02-23 21:12:20 -0500
+Processing by Api::V1::GoalsController#create as JSON
+  Parameters: {"goals"=>{"title"=>":^)", "completed"=>false, "user_id"=>1}, "goal"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mGoal Create (1.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ":^)"], ["completed", 0], ["user_id", 1], ["created_at", "2021-02-24 02:12:20.189675"], ["updated_at", "2021-02-24 02:12:20.189675"]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+Completed 200 OK in 20ms (Views: 0.3ms | ActiveRecord: 9.8ms | Allocations: 5096)
+
+
+Started POST "/api/v1/goals" for ::1 at 2021-02-23 21:12:30 -0500
+Processing by Api::V1::GoalsController#create as JSON
+  Parameters: {"goals"=>{"title"=>"ツ", "completed"=>false, "user_id"=>1}, "goal"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mGoal Create (1.1ms)[0m  [1m[32mINSERT INTO "goals" ("title", "completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ツ"], ["completed", 0], ["user_id", 1], ["created_at", "2021-02-24 02:12:30.596325"], ["updated_at", "2021-02-24 02:12:30.596325"]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 8.3ms | Allocations: 5636)
+
+
+Started POST "/api/v1/goals" for ::1 at 2021-02-23 21:12:33 -0500
+Processing by Api::V1::GoalsController#create as JSON
+  Parameters: {"goals"=>{"title"=>"シ", "completed"=>false, "user_id"=>1}, "goal"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mGoal Create (1.1ms)[0m  [1m[32mINSERT INTO "goals" ("title", "completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "シ"], ["completed", 0], ["user_id", 1], ["created_at", "2021-02-24 02:12:33.872981"], ["updated_at", "2021-02-24 02:12:33.872981"]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 15.4ms | Allocations: 4811)
+
+
+Started DELETE "/api/v1/goals/15" for ::1 at 2021-02-23 21:12:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[36mGoal Destroy (1.4ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 8.8ms | Allocations: 8551)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:12:46 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms | Allocations: 3161)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:12:46 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 838)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:12:46 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.4ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1218)
+
+
+Started DELETE "/api/v1/goals/12" for ::1 at 2021-02-23 21:13:38 -0500
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[36mGoal Destroy (0.9ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 15.1ms | Allocations: 4784)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:13:40 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 624)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:13:40 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:13:40 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1063)
+
+
+Started POST "/api/v1/goals" for ::1 at 2021-02-23 21:13:48 -0500
+Processing by Api::V1::GoalsController#create as JSON
+  Parameters: {"goals"=>{"title"=>"Final test", "completed"=>false, "user_id"=>1}, "goal"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[36mGoal Create (0.9ms)[0m  [1m[32mINSERT INTO "goals" ("title", "completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Final test"], ["completed", 0], ["user_id", 1], ["created_at", "2021-02-24 02:13:48.119219"], ["updated_at", "2021-02-24 02:13:48.119219"]]
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:8:in `create'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 8.6ms | Allocations: 5539)
+
+
+Started DELETE "/api/v1/goals/16" for ::1 at 2021-02-23 21:13:50 -0500
+Processing by Api::V1::GoalsController#destroy as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[36mGoal Destroy (1.5ms)[0m  [1m[31mDELETE FROM "goals" WHERE "goals"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:19:in `destroy'
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 16.1ms | Allocations: 3317)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-23 21:13:51 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"users"=>{"name"=>"Jake"}, "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Jake"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 624)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-23 21:13:52 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 712)
+
+
+Started GET "/api/v1/goals" for ::1 at 2021-02-23 21:13:52 -0500
+Processing by Api::V1::GoalsController#index as */*
+  [1m[36mGoal Load (0.2ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/controllers/api/v1/goals_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 1063)
+
+

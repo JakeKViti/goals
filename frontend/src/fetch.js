@@ -55,5 +55,13 @@ class FetchCalls {
         console.log(json) 
         return json     
     })
-}
+  }
+
+  deleteProblem(e) {
+    debugger
+    console.log(e.target.id)
+    fetch(`${this.goalURL}/${e.target.id}`, {
+        method: "DELETE"
+    })
+  }
 }

@@ -79,6 +79,7 @@ class Goal {
 
     async deleteGoal(e){
         e.preventDefault()
+        sss.deleteProblem(e)
         console.log("delete")
         
     }
