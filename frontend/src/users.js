@@ -26,7 +26,7 @@ class User {
             for (let i=0; i < goals.length; i++){
                 if (this.id == goals[i].user_id){
                     let personalGoal = new Goal(goals[i])
-                    personalGoal.displayGoals()
+                    personalGoal.renderGoals()
                 }
             }
         })

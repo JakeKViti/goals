@@ -11,7 +11,7 @@ class Goal {
     }
 
     //this will render each of the user's goals
-    displayGoals(){
+    renderGoals(){
         let goalcontainer = document.querySelector(".goals-container")
         let goalp = document.createElement('p')
         goalp.innerText = this.title 
@@ -22,13 +22,13 @@ class Goal {
             let completed = completedGoal.innerText.strike()
             document.getElementById(`t${this.id}`).innerHTML = completed;
         } else {
-            this.displayComplete()
+            this.renderComplete()
         }
-        this.displayDelete()
+        this.renderDelete()
     }
 
     //This will render the complete button
-    displayComplete(){
+    renderComplete(){
         let goalcontainer = document.querySelector(".goals-container")
         let usergoalform = document.createElement('form')
         let completebtn = document.createElement('BUTTON')
@@ -41,7 +41,7 @@ class Goal {
     }
 
     //This will render the complete button
-    displayDelete(){
+    renderDelete(){
         let goalcontainer = document.querySelector(".goals-container")
         let usergoalform = document.createElement('form')
         let deletebtn = document.createElement('BUTTON')
@@ -84,7 +84,7 @@ class Goal {
             fetchCall.createGoal(e, userid)
             .then(newGoal => {
                 let goals = new Goal(newGoal)
-                goals.displayGoals()
+                goals.renderGoals()
             })
         })
     }
