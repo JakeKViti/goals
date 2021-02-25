@@ -69,7 +69,6 @@ class Goal {
     }
 
     static newGoal(userid){
-        console.log(userid)
         let newGoal = document.getElementById('myForm')
         newGoal.addEventListener("submit" , function(e){ 
             e.preventDefault()
@@ -100,5 +99,4 @@ class Goal {
         goalText.remove()
         e.target.remove()
     }
-
 }

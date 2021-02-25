@@ -21,7 +21,6 @@ class FetchCalls {
           })
           .then(resp => {
             let json = resp.json()
-            console.log(json) 
             return json     
         })
     }
@@ -52,7 +51,6 @@ class FetchCalls {
       })
       .then(resp => {
         let json = resp.json()
-        console.log(json) 
         return json     
     })
   }
@@ -79,7 +77,6 @@ class FetchCalls {
       })
       .then(resp => {
         let json = resp.json()
-        console.log(json) 
         return json     
     })
 }

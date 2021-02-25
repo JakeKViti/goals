@@ -10,7 +10,6 @@ class User {
             e.preventDefault()
             fetchCall.findOrCreateUser(e)
             .then(user => {
-                console.log(user)
                 let newUser = new User(user)
                 username.reset()
                 newUser.displayName()
@@ -19,11 +18,9 @@ class User {
     }   
 
     displayName(){
-        console.log("ツ")
         Goal.goalForm()
         fetchCall.displayAllGoals()
         .then(goals => {
-            console.log(goals)
             for (let i=0; i < goals.length; i++){
                 if (this.id == goals[i].user_id){
                     let personalGoal = new Goal(goals[i])
