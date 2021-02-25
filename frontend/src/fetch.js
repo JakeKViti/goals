@@ -79,5 +79,5 @@ class FetchCalls {
         let json = resp.json()
         return json     
     })
-}
+  }
 }
