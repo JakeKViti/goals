@@ -1,6 +1,4 @@
-const sss = new FetchCalls();
-//sss.findOrCreateUser()
-
+const fetchCall = new FetchCalls();
 
 document.addEventListener('DOMContentLoaded', function(){
     User.login()

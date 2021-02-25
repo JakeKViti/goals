@@ -14,16 +14,16 @@ class Goal {
         let goalcontainer = document.querySelector(".goals-container")
         let usergoalform = document.createElement('form')
         let completebtn = document.createElement('BUTTON')
-        let goalz = document.createElement('p')
+        let goalp = document.createElement('p')
         if (this.completed == false) {
             completebtn.innerText = "Complete"
             completebtn.id = `complete`
             usergoalform.appendChild(completebtn)
         }
         usergoalform.id = `${this.id}`
-        goalz.innerText = this.title 
-        goalz.id = `t${this.id}`
-        goalcontainer.appendChild(goalz)
+        goalp.innerText = this.title 
+        goalp.id = `t${this.id}`
+        goalcontainer.appendChild(goalp)
         goalcontainer.appendChild(usergoalform)
         if (this.completed == true) {
             let completedGoal = document.getElementById(`t${this.id}`)
@@ -52,16 +52,16 @@ class Goal {
         let nameinputter = document.getElementById('name-input')
         let namesubmit = document.getElementById('name-submitter')
         let asd = document.getElementById('user-inputer-container')
-        let x = document.createElement("FORM");
-        x.setAttribute("id", "myForm");
-        asd.appendChild(x);
-        let y = document.createElement("INPUT");
-        y.setAttribute("type", "text");
-        y.setAttribute("id", "goal");
-        document.getElementById("myForm").appendChild(y);
-        let btn = document.createElement("BUTTON");
-        document.getElementById("myForm").appendChild(btn);
-        btn.innerText = "Submit"
+        let goalForm = document.createElement("FORM");
+        goalForm.setAttribute("id", "myForm");
+        asd.appendChild(goalForm);
+        let goalInputter = document.createElement("INPUT");
+        goalInputter.setAttribute("type", "text");
+        goalInputter.setAttribute("id", "goal");
+        document.getElementById("myForm").appendChild(goalInputter);
+        let goalbtn = document.createElement("BUTTON");
+        document.getElementById("myForm").appendChild(goalbtn);
+        goalbtn.innerText = "Submit"
         welcome.innerText = `Welcome!`
         question.innerText = "Enter a goal here:"
         nameinputter.remove()
@@ -73,7 +73,7 @@ class Goal {
         let newGoal = document.getElementById('myForm')
         newGoal.addEventListener("submit" , function(e){ 
             e.preventDefault()
-            sss.createGoal(e, userid)
+            fetchCall.createGoal(e, userid)
             .then(newGoal => {
                 let goals = new Goal(newGoal)
                 goals.displayGoals()
@@ -84,20 +84,20 @@ class Goal {
 
     async completeGoal(e){
         e.preventDefault()
-        let text = document.getElementById(`t${e.target.id}`)
-        let completed = text.innerText.strike()
+        let goalText = document.getElementById(`t${e.target.id}`)
+        let completed = goalText.innerText.strike()
         document.getElementById(`t${e.target.id}`).innerHTML = completed;
-        sss.completeGoal(e)
+        fetchCall.completeGoal(e)
         e.target.remove()
     }
 
     async deleteGoal(e){
         e.preventDefault()
         let completed = document.getElementById(`${e.target.id}`)
-        let text = document.getElementById(`t${e.target.id}`)
-        sss.deleteProblem(e)
+        let goalText = document.getElementById(`t${e.target.id}`)
+        fetchCall.deleteProblem(e)
         completed.remove()
-        text.remove()
+        goalText.remove()
         e.target.remove()
     }
 

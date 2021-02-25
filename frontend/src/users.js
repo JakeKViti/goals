@@ -8,10 +8,10 @@ class User {
         let username = document.getElementById('user-form')
         username.addEventListener("submit" , function(e){ 
             e.preventDefault()
-            sss.findOrCreateUser(e)
-            .then(dude => {
-                console.log(dude)
-                let newUser = new User(dude)
+            fetchCall.findOrCreateUser(e)
+            .then(user => {
+                console.log(user)
+                let newUser = new User(user)
                 username.reset()
                 newUser.displayName()
             })
@@ -21,13 +21,13 @@ class User {
     displayName(){
         console.log("ツ")
         Goal.goalForm()
-        sss.displayAllGoals()
-        .then(zzz => {
-            console.log(zzz)
-            for (let i=0; i < zzz.length; i++){
-                if (this.id == zzz[i].user_id){
-                    let goals = new Goal(zzz[i])
-                    goals.displayGoals()
+        fetchCall.displayAllGoals()
+        .then(goals => {
+            console.log(goals)
+            for (let i=0; i < goals.length; i++){
+                if (this.id == goals[i].user_id){
+                    let personalGoal = new Goal(goals[i])
+                    personalGoal.displayGoals()
                 }
             }
         })
