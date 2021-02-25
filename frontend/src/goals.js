@@ -10,15 +10,13 @@ class Goal {
         Goal.userGoals.push(goal)
     }
 
+    //this will render each of the user's goals
     displayGoals(){
         let goalcontainer = document.querySelector(".goals-container")
-        let usergoalform = document.createElement('form')
         let goalp = document.createElement('p')
-        usergoalform.id = `${this.id}`
         goalp.innerText = this.title 
         goalp.id = `t${this.id}`
         goalcontainer.appendChild(goalp)
-        goalcontainer.appendChild(usergoalform)
         if (this.completed == true) {
             let completedGoal = document.getElementById(`t${this.id}`)
             let completed = completedGoal.innerText.strike()
@@ -27,9 +25,9 @@ class Goal {
             this.displayComplete()
         }
         this.displayDelete()
-        usergoalform.addEventListener('submit', this.completeGoal.bind(this))   
     }
 
+    //This will render the complete button
     displayComplete(){
         let goalcontainer = document.querySelector(".goals-container")
         let usergoalform = document.createElement('form')
@@ -42,6 +40,7 @@ class Goal {
         usergoalform.addEventListener('submit', this.completeGoal.bind(this))   
     }
 
+    //This will render the complete button
     displayDelete(){
         let goalcontainer = document.querySelector(".goals-container")
         let usergoalform = document.createElement('form')
@@ -54,6 +53,7 @@ class Goal {
         usergoalform.addEventListener('submit', this.deleteGoal.bind(this))   
     }
 
+    //This will render the form to create a new goal
     static goalForm(){
         let welcome = document.getElementById('qwerty')
         let question = document.getElementById('name-label')
@@ -76,6 +76,7 @@ class Goal {
         namesubmit.remove()
     }
 
+    //This will create the new goal
     static newGoal(userid){
         let newGoal = document.getElementById('myForm')
         newGoal.addEventListener("submit" , function(e){ 
@@ -88,7 +89,7 @@ class Goal {
         })
     }
 
-
+    //This will complete the goal when complete button gets pressed
     async completeGoal(e){
         e.preventDefault()
         let goalText = document.getElementById(`t${e.target.id}`)
@@ -98,11 +99,12 @@ class Goal {
         e.target.remove()
     }
 
+    //This will delete the goal when delete button gets pressed
     async deleteGoal(e){
         e.preventDefault()
         let completed = document.getElementById(`${e.target.id}`)
         let goalText = document.getElementById(`t${e.target.id}`)
-        fetchCall.deleteProblem(e)
+        fetchCall.deleteGoal(e)
         completed.remove()
         goalText.remove()
         e.target.remove()

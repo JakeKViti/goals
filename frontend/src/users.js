@@ -4,6 +4,7 @@ class User {
         this.id = user.id
     }
 
+    //This will login the user into the site
     static login(){
         let username = document.getElementById('user-form')
         username.addEventListener("submit" , function(e){ 
@@ -12,12 +13,13 @@ class User {
             .then(user => {
                 let newUser = new User(user)
                 username.reset()
-                newUser.displayName()
+                newUser.displayUserGoals()
             })
         })
     }   
 
-    displayName(){
+    //This will get all the user's goals and display them
+    displayUserGoals(){
         Goal.goalForm()
         fetchCall.displayAllGoals()
         .then(goals => {

@@ -5,6 +5,7 @@ class FetchCalls {
     this.goalURL = `${this.baseURL}/goals`
     }
 
+    //this will create or find a user
     findOrCreateUser(e){
         return fetch(this.userURL, {
             method: 'POST',
@@ -25,6 +26,7 @@ class FetchCalls {
         })
     }
 
+    //this will get all the goals in the database
     displayAllGoals(){
       return fetch(this.goalURL)
       .then(resp => {
@@ -33,6 +35,7 @@ class FetchCalls {
       })
   }
 
+  //this will create a new goal
   createGoal(e, userid){
     return fetch(this.goalURL, {
         method: 'POST',
@@ -55,12 +58,14 @@ class FetchCalls {
     })
   }
 
-  deleteProblem(e) {
+  //This will delete a goal
+  deleteGoal(e) {
         fetch(`${this.goalURL}/${e.target.id}`, {
         method: "DELETE"
     })
   }
 
+  //This will complete a goal
   completeGoal(e){
     return fetch(`${this.goalURL}/${e.target.id}`, {
         method: 'PATCH',
