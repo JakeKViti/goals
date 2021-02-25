@@ -13,13 +13,7 @@ class Goal {
     displayGoals(){
         let goalcontainer = document.querySelector(".goals-container")
         let usergoalform = document.createElement('form')
-        let completebtn = document.createElement('BUTTON')
         let goalp = document.createElement('p')
-        if (this.completed == false) {
-            completebtn.innerText = "Complete"
-            completebtn.id = `complete`
-            usergoalform.appendChild(completebtn)
-        }
         usergoalform.id = `${this.id}`
         goalp.innerText = this.title 
         goalp.id = `t${this.id}`
@@ -29,8 +23,22 @@ class Goal {
             let completedGoal = document.getElementById(`t${this.id}`)
             let completed = completedGoal.innerText.strike()
             document.getElementById(`t${this.id}`).innerHTML = completed;
+        } else {
+            this.displayComplete()
         }
         this.displayDelete()
+        usergoalform.addEventListener('submit', this.completeGoal.bind(this))   
+    }
+
+    displayComplete(){
+        let goalcontainer = document.querySelector(".goals-container")
+        let usergoalform = document.createElement('form')
+        let completebtn = document.createElement('BUTTON')
+        completebtn.innerText = "Complete"
+        completebtn.id = `complete`
+        usergoalform.appendChild(completebtn)
+        usergoalform.id = `${this.id}`
+        goalcontainer.appendChild(usergoalform)
         usergoalform.addEventListener('submit', this.completeGoal.bind(this))   
     }
 
