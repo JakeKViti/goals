@@ -54,7 +54,7 @@ class Goal {
     }
 
     //This will render the form to create a new goal
-    static goalForm(){
+    static goalForm(username){
         let welcome = document.getElementById('qwerty')
         let question = document.getElementById('name-label')
         let nameinputter = document.getElementById('name-input')
@@ -70,7 +70,7 @@ class Goal {
         let goalbtn = document.createElement("BUTTON");
         document.getElementById("myForm").appendChild(goalbtn);
         goalbtn.innerText = "Submit"
-        welcome.innerText = `Welcome!`
+        welcome.innerText = `Welcome ${username}!`
         question.innerText = "Enter a goal here:"
         nameinputter.remove()
         namesubmit.remove()

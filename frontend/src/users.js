@@ -20,7 +20,7 @@ class User {
 
     //This will get all the user's goals and display them
     displayUserGoals(){
-        Goal.goalForm()
+        Goal.goalForm(this.name)
         fetchCall.displayAllGoals()
         .then(goals => {
             for (let i=0; i < goals.length; i++){
