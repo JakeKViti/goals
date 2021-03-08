@@ -6,30 +6,30 @@ class User {
 
     //This will login the user into the site
     static login(){
-        let username = document.getElementById('user-form')
+        let username = document.getElementById('user-form');
         username.addEventListener("submit" , function(e){ 
-            e.preventDefault()
+            e.preventDefault();
             fetchCall.findOrCreateUser(e)
             .then(user => {
-                let newUser = new User(user)
-                username.reset()
-                newUser.displayUserGoals()
+                let newUser = new User(user);
+                username.reset();
+                newUser.displayUserGoals();
             })
         })
     }   
 
     //This will get all the user's goals and display them
     displayUserGoals(){
-        Goal.goalForm(this.name)
+        Goal.goalForm(this.name);
         fetchCall.displayAllGoals()
         .then(goals => {
             for (let i=0; i < goals.length; i++){
                 if (this.id == goals[i].user_id){
-                    let personalGoal = new Goal(goals[i])
-                    personalGoal.renderGoals()
+                    let personalGoal = new Goal(goals[i]);
+                    personalGoal.renderGoals();
                 }
             }
         })
-        Goal.newGoal(this.id)
+        Goal.newGoal(this.id);
     }
 }

@@ -6,56 +6,50 @@ class FetchCalls {
     }
 
     //this will create or find a user
-    findOrCreateUser(e){
-        return fetch(this.userURL, {
-            method: 'POST',
-            headers:  {
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-            },
-            body: JSON.stringify(
-              {
-                users: {
-                    name: e.target.children[1].value
-                }
-            })
-          })
-          .then(resp => {
-            let json = resp.json()
-            return json     
-        })
-    }
-
-    //this will get all the goals in the database
-    displayAllGoals(){
-      return fetch(this.goalURL)
-      .then(resp => {
-        let json = resp.json()
-        return json  
-      })
-  }
-
-  //this will create a new goal
-  createGoal(e, userid){
-    return fetch(this.goalURL, {
+    async findOrCreateUser(e){
+        const resp = await fetch(this.userURL, {
         method: 'POST',
-        headers:  {
+        headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
         body: JSON.stringify(
           {
-            goals: {
-                title: e.target.children[0].value,
-                completed: false,
-                user_id: userid
+            users: {
+              name: e.target.children[1].value
             }
-        })
+          })
       })
-      .then(resp => {
-        let json = resp.json()
-        return json     
+      let json = resp.json();
+      return await json;
+    }
+
+    //this will get all the goals in the database
+    async displayAllGoals(){
+      const resp = await fetch(this.goalURL);
+      let json = resp.json();
+      return await json;
+  }
+
+  //this will create a new goal
+  async createGoal(e, userid){
+    const resp = await fetch(this.goalURL, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(
+        {
+          goals: {
+            title: e.target.children[0].value,
+            completed: false,
+            user_id: userid
+          }
+        })
     })
+    let json = resp.json();
+    return await json;
   }
 
   //This will delete a goal
@@ -66,23 +60,21 @@ class FetchCalls {
   }
 
   //This will complete a goal
-  completeGoal(e){
-    return fetch(`${this.goalURL}/${e.target.id}`, {
-        method: 'PATCH',
-        headers:  {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify(
-          {
-            goals: {
-              completed: true
-            }
+  async completeGoal(e){
+    const resp = await fetch(`${this.goalURL}/${e.target.id}`, {
+      method: 'PATCH',
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(
+        {
+          goals: {
+            completed: true
+          }
         })
-      })
-      .then(resp => {
-        let json = resp.json()
-        return json     
     })
+    let json = resp.json(); 
+    return await json;
   }
 }
