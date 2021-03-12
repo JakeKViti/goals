@@ -55,14 +55,14 @@ class Goal {
 
     //This will render the form to create a new goal
     static goalForm(username){
-        let welcome = document.getElementById('qwerty');
+        let welcome = document.getElementById('welcome');
         let question = document.getElementById('name-label');
         let nameinputter = document.getElementById('name-input');
         let namesubmit = document.getElementById('name-submitter');
-        let asd = document.getElementById('user-inputer-container');
+        let userinputcontainer = document.getElementById('user-inputer-container');
         let goalForm = document.createElement("FORM");
         goalForm.setAttribute("id", "myForm");
-        asd.appendChild(goalForm);
+        userinputcontainer.appendChild(goalForm);
         let goalInputter = document.createElement("INPUT");
         goalInputter.setAttribute("type", "text");
         goalInputter.setAttribute("id", "goal");
