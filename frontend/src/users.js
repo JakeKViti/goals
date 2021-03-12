@@ -9,12 +9,14 @@ class User {
         let username = document.getElementById('user-form');
         username.addEventListener("submit" , function(e){ 
             e.preventDefault();
-            fetchCall.findOrCreateUser(e)
-            .then(user => {
-                let newUser = new User(user);
-                username.reset();
-                newUser.displayUserGoals();
-            })
+            if (e.target.children[1].value != "") {
+                fetchCall.findOrCreateUser(e)
+                .then(user => {
+                    let newUser = new User(user);
+                    username.reset();
+                    newUser.displayUserGoals();
+                })
+            }
         })
     }   
 

@@ -81,11 +81,13 @@ class Goal {
         let newGoal = document.getElementById('myForm')
         newGoal.addEventListener("submit" , function(e){ 
             e.preventDefault();
-            fetchCall.createGoal(e, userid)
-            .then(newGoal => {
-                let goals = new Goal(newGoal);
-                goals.renderGoals();
-            })
+            if (e.target.children[0].value != "") {
+                fetchCall.createGoal(e, userid)
+                .then(newGoal => {
+                    let goals = new Goal(newGoal);
+                    goals.renderGoals();
+                })
+            } 
         })
     }
 
