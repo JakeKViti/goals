@@ -25,7 +25,7 @@ class FetchCalls {
     }
 
     //this will get all the goals in the database
-    async displayAllGoals(){
+    async getAllGoals(){
       const resp = await fetch(this.goalURL);
       let json = resp.json();
       return await json;
@@ -53,7 +53,7 @@ class FetchCalls {
   }
 
   //This will delete a goal
-  deleteGoal(e) {
+  async deleteGoal(e) {
         fetch(`${this.goalURL}/${e.target.id}`, {
         method: "DELETE"
     })

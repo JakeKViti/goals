@@ -23,7 +23,7 @@ class User {
     //This will get all the user's goals and display them
     displayUserGoals(){
         Goal.goalForm(this.name);
-        fetchCall.displayAllGoals()
+        fetchCall.getAllGoals()
         .then(goals => {
             for (let i=0; i < goals.length; i++){
                 if (this.id == goals[i].user_id){
