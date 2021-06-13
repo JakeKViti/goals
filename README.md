@@ -1,6 +1,8 @@
 ## Goal Watcher
 This project is designed to help track a user's goals
 
+![Demo Gif](https://github.com/JakeKViti/goals/blob/main/gifs/ezgif.com-gif-maker%20(4).gif?raw=true)
+
 ## Installation
 
 Add this to a new folder:
